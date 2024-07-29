@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap');
+
+section{
+    font-family: 'Darker Grotesque';
+    margin: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.barraDeBusca input{
+    width: 40rem;
+    height: 2.5rem;
+    padding: 0;
+    padding-left: 2px;
+    margin-right: 1rem;
+}
+
+.barraDeBusca button{
+    background-color: #DEB959;
+    color: white;
+    height: 2.5rem;
+    border: 0px;
+}
+
+.barraDeBusca button:hover{
+    cursor: pointer;
+}
+
+.lobo{
+    display: flex;
+    width: 60rem;
+    height: 15rem;
+    padding: 2rem;
+}
+
+.imagemLobo{
+    position: relative;
+    background-color: #2C5680;
+    height: 14rem;
+    width: 24rem;
+    margin-right: 2rem;
+}
+
+.imagemLobo img{
+    position: absolute;
+    top: 1rem;
+    right: -1rem;
+    background-color: #DEB959;
+    height: 14rem;
+    width: 24rem;
+
+}
+
+.dadosDoLobo{
+    width: 50%;
+}
+
+.dadosDoLobo div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+h1{
+    font: revert;
+    font-size: 2rem;
+}
+
+.botaoAdotar{
+    background-color: #DEB959;
+    color: white;
+    height: 2.5rem;
+    border: 0px;
+}
+
+.botaoAdotar:hover{
+    cursor: pointer;
+}
