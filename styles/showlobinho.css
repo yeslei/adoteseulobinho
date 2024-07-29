@@ -1,4 +1,78 @@
+* {
+    font-family: "Darker Grotesque", sans-serif;
+}
+
 section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h1 {
+    margin: 8vh;
+    font-size: 7vh;
+    font-weight: 700
+}
+
+.lobosimg {
+    position: relative;
+    margin-right: 1vw;
+}
+
+.lobo {
+    position: relative; /* Ensure it has a positioning context */
+    z-index: 2; /* Higher z-index to appear above .detalhelobo */
+}
+
+.detalhelobo {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    left: -30px; /* Adjust this value to move it to the left */
+    top: -30px; /* Adjust this value to move it up */
+    z-index: 1; /* Lower z-index to appear behind .lobo */
+}
+
+.lobos {
+    display: flex;
     justify-content: center;
+    align-items: flex-start;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.lobos p {
+    width: 30%;
+    font-size: 3vh;
+    white-space: pre-wrap;
+}
+
+.lobosimg img {
+    width: 540px;
+    height: 336px;
+}
+
+.lobos div {
+    margin-top: 2vh;
+}
+.lobos div a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    background: #7AAC3A;
+    font-weight: 500;
+    padding: 1vw 3vw 1vw 3vw;
+
+}
+
+.lobos div button {
+    color: white;
+    font-size: 1.5vw;
+    background: #DE5959;
+    font-weight: 500;
+    border: none;
+    padding: 1vw 3vw 1vw 3vw;
+}
+
+.butoes {
+    display: flex;
+    justify-content: space-around;
 }
