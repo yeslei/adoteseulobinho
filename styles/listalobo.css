@@ -30,6 +30,8 @@ section{
     cursor: pointer;
 }
 
+/*----------------------*/
+
 .lobo{
     display: flex;
     width: 60rem;
@@ -49,7 +51,9 @@ section{
     position: absolute;
     top: 1rem;
     right: -1rem;
-    background-color: #DEB959;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 14rem;
     width: 24rem;
 
@@ -79,4 +83,20 @@ h1{
 
 .botaoAdotar:hover{
     cursor: pointer;
+}
+
+.l2{
+    flex-direction: row-reverse;
+}
+
+.l4{
+    flex-direction: row-reverse;
+}
+
+.iL2{
+    margin-left: 2rem;
+}
+
+.iL4{
+    margin-left: 2rem;
 }
