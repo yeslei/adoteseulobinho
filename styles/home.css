@@ -2,6 +2,26 @@ header {
     background-color: #85CDF5;
     display: flex;
     justify-content: space-evenly;
+    align-items: center
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap');
+
+
+
+/* footer */
+#degrade {
+    background: linear-gradient(270deg, #2C5680 0%, #DEB959 100%);
+    width: 100%;
+    height: 5px;
+}
+
+#divFooter {
+    background-color: #333333;
+    width: 100%;
+    height: 270px;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -33,4 +53,54 @@ header {
 .link_header:hover::after {
     transform: scaleX(1);
     transform-origin: bottom right;
+}
+.esquerdaFooter {
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    margin-right: 40px;
+}
+
+.footer {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    line-height: 24.41px;
+}
+
+#divDesenvolvidoPor {
+    display: flex;
+    flex-flow: column;
+}
+
+.textosFooter {
+    width: 378px;
+    line-height: 15px;
+}
+
+.textoIcon {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.imgFooter {
+    margin-right: 6px;
+}
+
+.ultimoIcon {
+    margin-bottom: 30px;
+}
+
+#quemsomos {
+    padding: 2px 10px 7px 9px;
+    background: #DEB959;
+    color: black;
+    text-decoration: none;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 20px;
 }
