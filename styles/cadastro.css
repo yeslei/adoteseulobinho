@@ -44,6 +44,7 @@ input {
     font-size: 30px;
     word-break: break-all;
     overflow: scroll;
+
     
 }
 
@@ -72,6 +73,16 @@ input {
 #descricao_lobo {
     width: 760.98px;
     height: 250px;
+    display: flex; /* Use flexbox to align items */
+    resize: none;
+
+    box-sizing: border-box;
+    background: #E6E6E6;
+    border: 1px solid #333333;
+    font-family: 'Darker Grotesque';
+    font-style: normal;
+    font-size: 30px;
+    word-break: break-all;  
 }
 
 .botao {
@@ -98,6 +109,9 @@ input {
     background-color: #3b92e9;
 }
 
+.espacamento{
+    margin-bottom: 18px;
+}
 
 
 
