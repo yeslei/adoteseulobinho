@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap');
+
+a {
+    text-decoration: none; 
+}
+
+.primeiraSection {
+    font-family: 'Darker Grotesque';
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/LoboPrimeiraSection.svg);
+    background-position: center;
+    background-size: cover;
+    padding: 15vh;
+}
+
+.primeiraSectionLetras {
+    position: absolute; 
+    color: white; 
+    font-size: 2rem; 
+    text-align: center; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.primeiraSectionTitulo {
+    color: white; 
+    font-size: 96px; 
+    padding-bottom: 1vh; 
+    display: inline-block; 
+    font-weight: 700;
+    position: relative; 
+    margin-bottom: 20px; 
+}
+
+.linha {
+    width: 0; /* Largura inicial da linha */
+    height: 4px; 
+    background: white; 
+    transition: width 0.3s ease; 
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    transform-origin: center; /* Origem da transformação no centro */
+}
+
+.titulo:hover .linha {
+    width: 50%; 
+}
+
+.primeiraSectionParagrafo {
+    margin-top: 4vh;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/* Segunda Section  */
+
+.segundaSection {
+    font-family: 'Darker Grotesque';
+    display: flex;
+    flex-direction: column;
+    background-color: #2C5680;    ;
+    align-items: center;
+    padding: 4vh;
+}
+
+.segundaSectionTitulo {
+    color: #DEB959;
+    font-size: 4.44vh; 
+    padding-bottom: 3vh; 
+    font-weight: 700;
+    position: relative; 
+}
+
+.segundaSectionParagrafo {
+    font-weight: 400;
+    font-size: 2.22vh;
+    text-align: center;
+    width: 50vw;
+    color: white;
+}
+
+/* terceira section  */
+
+.terceiraSection {
+    font-family: 'Darker Grotesque';
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh;
+}
+
+.terceiraSectionTitulo {
+    margin-bottom: 2vh;
+}
+
+.valoresImg {
+    width: 50%;
+    margin-bottom: 5vh;
+}
+
+/* quarta section  */
+
+.quartaSection {
+    background-color: white;
+    text-align: center;
+    margin-top: 7vh;
+    
+
+}
+
+.quartaSection h2 {
+    margin-bottom: 10vh;
+}
+
+.lobosimg {
+    position: relative;
+    margin-right: 5vw;
+}
+
+.lobo {
+    position: relative; /* Ensure it has a positioning context */
+    z-index: 2; /* Higher z-index to appear above .detalhelobo */
+}
+
+.detalhelobo {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    left: -30px; /* Adjust this value to move it to the left */
+    top: -30px; /* Adjust this value to move it up */
+    z-index: 1; /* Lower z-index to appear behind .lobo */
+}
+
+.lobos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.quartaSectionTexto {
+    text-align: start;
+    width: 30%;
+}
+
+.quartaSectionTexto h3 {
+    font-size: 3vw;
+    margin-bottom: 3vh;
+    
+}
+
+.quartaSectionTexto h4 {
+    font-size: 2.0vw;
+    margin-bottom: 5vh;
+
+    
+}
+
+.quartaSectionTexto p{
+    font-size: 1.2vw;
+    margin-bottom: 5vh;
+    
+    
+}.lobos.invertido {
+    flex-direction: row-reverse;
+}
+
+.quartaSectionTexto.invertido {
+    text-align: end;
+    width: 30%;
+}
+
+.lobosimg.invertido{
+    position: relative;
+    margin-left: 5vw;
+}
+   
+.detalhelobo.invertido {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    left: 30px; /* Adjust this value to move it to the left */
+    top: -30px; /* Adjust this value to move it up */
+    z-index: 1; /* Lower z-index to appear behind .lobo */
+}
