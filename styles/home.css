@@ -110,7 +110,80 @@ a {
 .quartaSection {
     background-color: white;
     text-align: center;
+    margin-top: 7vh;
+    
 
 }
 
+.quartaSection h2 {
+    margin-bottom: 10vh;
+}
 
+.lobosimg {
+    position: relative;
+    margin-right: 5vw;
+}
+
+.lobo {
+    position: relative; /* Ensure it has a positioning context */
+    z-index: 2; /* Higher z-index to appear above .detalhelobo */
+}
+
+.detalhelobo {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    left: -30px; /* Adjust this value to move it to the left */
+    top: -30px; /* Adjust this value to move it up */
+    z-index: 1; /* Lower z-index to appear behind .lobo */
+}
+
+.lobos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.quartaSectionTexto {
+    text-align: start;
+    width: 30%;
+}
+
+.quartaSectionTexto h3 {
+    font-size: 3vw;
+    margin-bottom: 3vh;
+    
+}
+
+.quartaSectionTexto h4 {
+    font-size: 2.0vw;
+    margin-bottom: 5vh;
+
+    
+}
+
+.quartaSectionTexto p{
+    font-size: 1.2vw;
+    margin-bottom: 5vh;
+    
+    
+}.lobos.invertido {
+    flex-direction: row-reverse;
+}
+
+.quartaSectionTexto.invertido {
+    text-align: end;
+    width: 30%;
+}
+
+.lobosimg.invertido{
+    position: relative;
+    margin-left: 5vw;
+}
+   
+.detalhelobo.invertido {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    left: 30px; /* Adjust this value to move it to the left */
+    top: -30px; /* Adjust this value to move it up */
+    z-index: 1; /* Lower z-index to appear behind .lobo */
+}
