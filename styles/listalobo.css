@@ -45,6 +45,7 @@ section{
     height: 14rem;
     width: 24rem;
     margin-right: 2rem;
+    border: 3px solid black;
 }
 
 .imagemLobo img{
@@ -56,7 +57,6 @@ section{
     background-position: center;
     height: 14rem;
     width: 24rem;
-
 }
 
 .dadosDoLobo{
