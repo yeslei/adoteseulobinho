@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;700&display=swap');
+
+main {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-flow: column wrap;
+    padding-bottom: 50px;
+}
+
+label {
+    font-family: 'Darker Grotesque';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 41px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+h1 {
+    font-family: 'Darker Grotesque';
+    font-style: normal;
+    font-size: 60px;
+    line-height: 81px;
+    text-align: center;
+    color: #000000;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #333333;
+    padding: 5px 0;
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus {
+    border-bottom-color: #665b5b;
+}
+
+#imagemLobo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#id {
+    font-family: 'Darker Grotesque';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.info_pessoa {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+#idade_pessoa {
+    width: 72px;
+}
+
+#nome_pessoa {
+    width: 700px;
+}
+
+#email {
+    width: 790px;
+}
+
+.botao {
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.adote {
+    width: 209px;
+    height: 60px;
+    background: #2C5680;
+    border: 1px solid #333333;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FFFFFF;
+}
+
+.adote:active {
+    background-color: #3b92e9;
+}
+
+.sector {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.photo {
+    padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
