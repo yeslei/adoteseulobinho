@@ -19,14 +19,15 @@ section{
     margin-right: 1rem;
 }
 
-.barraDeBusca button{
+.barraDeBusca a{
     background-color: #DEB959;
     color: white;
-    height: 2.5rem;
+    padding: 0.7035rem;
     border: 0px;
+    text-decoration: none;
 }
 
-.barraDeBusca button:hover{
+.barraDeBusca a:hover{
     cursor: pointer;
 }
 
