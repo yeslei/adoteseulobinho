@@ -4,7 +4,6 @@ const idDoLobo = urlParams.get('id');
 if (idDoLobo) {
     console.log('ID do lobo:', idDoLobo);
 
-
     const url = `http://localhost:3000/lobinhos`;
     console.log('URL de requisição:', url);
 
@@ -19,15 +18,16 @@ if (idDoLobo) {
         .then(data => {
             const lobo = data.find(lobo => lobo.id === idDoLobo);
             if (lobo) {
-                const loboNomeElement = document.getElementById('adotelobo');
-                const imagemLoboElement = document.getElementById('imagemLobo');
-                const idLoboElement = document.getElementById('id');
-
+                const loboNomeElement = document.getElementById('titulo');
+                const imagemLoboElement = document.querySelector('.lobo');
+                const paragrafo= document.getElementById('paragrafo2');
+                const adotarLinkElement = document.querySelector('.adotar-link');
 
                 if (loboNomeElement && imagemLoboElement) {
-                    loboNomeElement.textContent = `Adote o(a) ${lobo.nome}`;
+                    loboNomeElement.textContent = `${lobo.nome}`;
                     imagemLoboElement.src = lobo.imagem;
-                    idLoboElement.textContent = `ID: ${lobo.id}`;
+                    paragrafo.textContent = `${lobo.descricao}`;
+                    adotarLinkElement.href = `adotelobo.html?id=${lobo.id}`;
                 } else {
                     console.error('Elementos DOM não encontrados.');
                 }
@@ -42,18 +42,7 @@ if (idDoLobo) {
     console.error('Parâmetro "id" não encontrado na URL.');
 }
 
-function atualizarDados() {
- 
-    const nome = document.getElementById('nome_pessoa').value;
-    const idade = document.getElementById('idade_pessoa').value;
-    const email = document.getElementById('email').value;
-
-    const dados = {
-        adotado : true,
-        nomeDono: nome,
-        idadeDono: idade,
-        emailDono: email
-    };
+function deletar() {
 
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -62,11 +51,10 @@ function atualizarDados() {
     if (idDoLobo) {
 
         fetch(`http://localhost:3000/lobinhos/${idDoLobo}`, { 
-            method: 'PATCH',
+            method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dados)
         })
         .then(response => {
             if (!response.ok) {

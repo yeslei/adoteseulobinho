@@ -22,6 +22,7 @@ section h1 {
 .lobo {
     position: relative; /* Ensure it has a positioning context */
     z-index: 2; /* Higher z-index to appear above .detalhelobo */
+
 }
 
 .detalhelobo {
@@ -75,4 +76,15 @@ section h1 {
 .butoes {
     display: flex;
     justify-content: space-around;
+}
+
+.lobosimg img {
+    width: 30vw;
+}
+
+
+.lobo {
+    position: relative; /* Ensure it has a positioning context */
+    z-index: 2; /* Higher z-index to appear above .detalhelobo */
+    height: 50vh
 }
