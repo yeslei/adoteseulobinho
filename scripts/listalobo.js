@@ -28,6 +28,7 @@ function addHTML(lobinho, num) {
     content.append(div);
 }
 
+
 const fetchConfig = {
     method: 'GET',
     headers: {
