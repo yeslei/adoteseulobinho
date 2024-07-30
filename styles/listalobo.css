@@ -30,8 +30,6 @@ section{
     cursor: pointer;
 }
 
-/*----------------------*/
-
 .lobo{
     display: flex;
     width: 60rem;
@@ -84,7 +82,21 @@ h1{
     border: 0px;
 }
 
+.botaoAdotado{
+    background-color: #7AAC3A;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border: 0px;
+}
+
 .botaoAdotar:hover{
+    cursor: pointer;
+}
+
+.botaoAdotado:hover{
     cursor: pointer;
 }
 
@@ -100,5 +112,26 @@ h1{
 
 .lobo-reverse .imagemLobo {
     margin-left: 2vw;
+}
 
+.checkbox {
+    width: 20px;
+    height: 20px;
+
+    background: #FAFAFA;
+    border: 1px solid #333333;
+    border-radius: 5px;
+
+    margin-right: 10px;
+}
+
+.adotados {
+    font-family: 'Darker Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    color: #353535;
 }
