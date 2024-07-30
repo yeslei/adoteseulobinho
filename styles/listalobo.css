@@ -10,7 +10,6 @@ section{
     flex-direction: column;
 }
 
-
 .barraDeBusca input{
     width: 40rem;
     height: 2.5rem;
@@ -89,18 +88,17 @@ h1{
     cursor: pointer;
 }
 
-.l2{
+.reverse {
+    display: flex;
     flex-direction: row-reverse;
 }
 
-.l4{
+.lobo-reverse {
+    display: flex;
     flex-direction: row-reverse;
 }
 
-.iL2{
-    margin-left: 2rem;
-}
+.lobo-reverse .imagemLobo {
+    margin-left: 2vw;
 
-.iL4{
-    margin-left: 2rem;
 }

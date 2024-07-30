@@ -4,14 +4,15 @@ const search = document.querySelector("input[type='search']");
 var items = [];
 
 function addHTML(lobinho, num) {
-    var strAdotar = "Adotar"
+    var strAdotar = "Adotar";
     if (lobinho.adotado) {
-        strAdotar = "Adotado"
+        strAdotar = "Adotado";
     }
 
     const div = document.createElement("div");
+    const reverseClass = num % 2 === 0 ? "lobo-reverse" : "";
     div.innerHTML = `
-        <div class="lobo l${Number(lobinho.id) % 4}">
+        <div class="lobo ${reverseClass}">
             <div class="imagemLobo">
                 <img src="${lobinho.imagem}">
             </div>
@@ -38,10 +39,12 @@ const fetchConfig = {
 fetch("http://localhost:3000/lobinhos", fetchConfig)
     .then((resposta) => resposta.json())
     .then((lobinhos) => {
+        let index = 0;
         lobinhos.forEach((lobinho) => {
             if (!lobinho.adotado) {
-                addHTML(lobinho);
+                addHTML(lobinho, index);
                 items.push(lobinho);
+                index++;
             }
         });
     });
@@ -49,9 +52,13 @@ fetch("http://localhost:3000/lobinhos", fetchConfig)
 search.oninput = () => {
     content.innerHTML = "";
 
+    let index = 0;
     items
         .filter((item) =>
-            item.name.toLowerCase().includes(search.value.toLowerCase())
+            item.nome.toLowerCase().includes(search.value.toLowerCase())
         )
-        .forEach((item) => addHTML(item));
+        .forEach((item) => {
+            addHTML(item, index);
+            index++;
+        });
 };
