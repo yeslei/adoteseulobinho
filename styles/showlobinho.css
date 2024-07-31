@@ -71,6 +71,7 @@ section h1 {
     font-weight: 500;
     border: none;
     padding: 1vw 3vw 1vw 3vw;
+    cursor: pointer;
 }
 
 .butoes {
