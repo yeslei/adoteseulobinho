@@ -135,3 +135,35 @@ h1{
     align-items: center;
     color: #353535;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-button:hover {
+    background-color: #ddd;
+}
+
+.page-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.page-button:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}

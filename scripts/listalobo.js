@@ -2,8 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = document.querySelector(".content");
     const search = document.querySelector("input[type='search']");
     const checkbox = document.querySelector("#adotadosCheckbox");
+    const pagination = document.querySelector(".pagination");
 
     let items = [];
+    let currentPage = 1;
+    const itemsPerPage = 4;
 
     function addHTML(lobinho, num) {
         var strAdotar = "Adotar";
@@ -47,10 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return resposta.json();
         })
         .then((lobinhos) => {
-            lobinhos.forEach((lobinho, index) => {
-                addHTML(lobinho, index);
-                items.push(lobinho);
-            });
+            items = lobinhos;
+            updateContent();
         })
         .catch((error) => {
             console.error('Erro ao buscar lobinhos:', error);
@@ -62,11 +63,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (checkbox.checked) {
             filteredItems = items.filter(item => item.adotado);
+        } else {
+            filteredItems = items.filter(item => !item.adotado);
         }
 
-        filteredItems
-            .filter(item => item.nome.toLowerCase().includes(search.value.toLowerCase()))
-            .forEach((item, index) => addHTML(item, index));
+        filteredItems = filteredItems.filter(item => item.nome.toLowerCase().includes(search.value.toLowerCase()));
+
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedItems = filteredItems.slice(startIndex, endIndex);
+
+        paginatedItems.forEach((item, index) => addHTML(item, index));
+
+        updatePagination(filteredItems.length);
+    }
+
+    function updatePagination(totalItems) {
+        pagination.innerHTML = "";
+        const totalPages = Math.ceil(totalItems / itemsPerPage);
+        const maxButtons = 5;
+        let startPage = Math.max(1, currentPage - Math.floor(maxButtons / 2));
+        let endPage = Math.min(totalPages, startPage + maxButtons - 1);
+
+        if (endPage - startPage < maxButtons - 1) {
+            startPage = Math.max(1, endPage - maxButtons + 1);
+        }
+
+
+        const firstButton = document.createElement("button");
+        firstButton.textContent = "<<";
+        firstButton.classList.add("page-button");
+        firstButton.addEventListener("click", () => {
+            currentPage = 1;
+            updateContent();
+        });
+        pagination.append(firstButton);
+
+        for (let i = startPage; i <= endPage; i++) {
+            const button = document.createElement("button");
+            button.textContent = i;
+            button.classList.add("page-button");
+            if (i === currentPage) {
+                button.classList.add("active");
+            }
+            button.addEventListener("click", () => {
+                currentPage = i;
+                updateContent();
+            });
+            pagination.append(button);
+        }
+
+
+        const lastButton = document.createElement("button");
+        lastButton.textContent = ">>";
+        lastButton.classList.add("page-button");
+        lastButton.addEventListener("click", () => {
+            currentPage = totalPages;
+            updateContent();
+        });
+        pagination.append(lastButton);
     }
 
     search.oninput = updateContent;
