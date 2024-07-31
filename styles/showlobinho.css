@@ -17,10 +17,12 @@ section h1 {
 .lobosimg {
     position: relative;
     margin-right: 1vw;
+    margin-bottom: 20px;
 }
 
 .lobo {
     position: relative; /* Ensure it has a positioning context */
+    top: 10px;
     z-index: 2; /* Higher z-index to appear above .detalhelobo */
 
 }
@@ -51,9 +53,7 @@ section h1 {
     height: 336px;
 }
 
-.lobos div {
-    margin-top: 2vh;
-}
+
 .lobos div a {
     text-decoration: none;
     color: white;
@@ -71,6 +71,7 @@ section h1 {
     font-weight: 500;
     border: none;
     padding: 1vw 3vw 1vw 3vw;
+    cursor: pointer;
 }
 
 .butoes {

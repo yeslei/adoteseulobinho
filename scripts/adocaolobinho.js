@@ -76,7 +76,7 @@ function atualizarDados() {
         })
         .then(data => {
             console.log('Sucesso:', data);
-           
+            alert("Lobo adotado!")
         })
         .catch(error => {
             console.error('Erro:', error);
