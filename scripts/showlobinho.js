@@ -64,7 +64,7 @@ function deletar() {
         })
         .then(data => {
             console.log('Sucesso:', data);
-           
+            alert("Lobo removido!")
         })
         .catch(error => {
             console.error('Erro:', error);
