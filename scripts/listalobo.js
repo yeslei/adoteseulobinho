@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (checkbox.checked) {
             filteredItems = items.filter(item => item.adotado);
-        } else {
-            filteredItems = items.filter(item => !item.adotado);
         }
 
         filteredItems
