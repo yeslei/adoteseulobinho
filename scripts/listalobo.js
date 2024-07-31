@@ -6,11 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let items = [];
 
     function addHTML(lobinho, num) {
-        var strAdotar = "Adotar";
-        var classAdotar = "botaoAdotar"
+        var classAdotar = `<a href="showlobinho.html?id=${lobinho.id}" class="botaoAdotar">Adotar</a>`
         if (lobinho.adotado) {
-            strAdotar = "Adotado";
-            classAdotar = "botaoAdotado"
+            classAdotar = `<button onclick="alert('Já está adotado')" class="botaoAdotado">Adotado</a>`
+            
         }
         
         const reverseClass = num % 2 === 0 ? "" : "lobo-reverse";
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="dadosDoLobo">
                     <div>
                         <h1>${lobinho.nome}</h1>
-                        <a href="showlobinho.html?id=${lobinho.id}" class="${classAdotar}">${strAdotar}</a>
+                        ${classAdotar}
                     </div>
                     <p>${lobinho.descricao}</p>
                 </div>
